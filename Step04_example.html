@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_example.html</title>
+</head>
+<body>
+    <h1>array 테스트중...</h1>
+    <input type="text" id="msg" placeholder="할일 입력..."/>
+    <button onclick = "save()">저장</button>
+    <button onclick = "show()">저장된 내용 보기</button>
+    <p id = "console"></p>
+    <script>
+        //페이지가 로딩되는 시점에 할일(문자열) 을 저장할 배열 만들기
+        var msgs = [];
+        // var i = 0;
+        // 저장 버튼을 누르면 호출되는 함수
+        function save(){
+            msgs.push(document.querySelector("#msg").value);
+            console.log(msgs); 
+
+            alert("저장 되었습니다.");
+        
+            document.querySelector("#msg").value = null;
+        //    var a = document.querySelector("#msg").value;
+        //    msg.push(a);
+        }
+        //저장된 내용 보기 누르면 호출되는 함수
+        function show(){    
+            /*
+            document.querySelector("#console").innerText = msgs[i];
+            i++;
+            if(i>msgs.length){
+                alert("더 이상 없음");
+                i = 0;
+                document.querySelector("#console").innerText = null;
+            }
+            */
+            var todo = "";
+            for (var i=0; i<msgs.length; i++){
+                var line = msgs[i];
+                console.log(line);
+                todo += line;
+            }
+
+            document.querySelector("#console").innerText=todo;
+        }
+    </script>
+</body>
+</html>
