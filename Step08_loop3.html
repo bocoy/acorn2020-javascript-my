@@ -14,7 +14,6 @@
     <p>p5</p>
     <button id = "printBtn">출력하기</button>
     <script>
-        
         var names = ["김구라","해골","원숭이","주뎅이","덩어리"];
         var count = 0;
         
@@ -36,12 +35,12 @@
         */
         document.querySelector("#printBtn").addEventListener("click",function(){
             while(true){
-            a[count].innerText = names[count];
-            count++;
-            if (count==names.length){
-                break;
+                a[count].innerText = names[count];
+                count++;
+                if (count==names.length){
+                    break;
+                }
             }
-        }
         });
         
     </script>
