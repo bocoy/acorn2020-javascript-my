@@ -21,14 +21,16 @@
         
         document.querySelector("#findBtn").addEventListener("click", function(){
             var a = document.querySelector("#inputName").value;
+            var count = false;
              for(var i=0; i<friends.length; i++){
                  if(a == friends[i].name){
                     document.querySelector("#console").innerText = JSON.stringify(friends[i]);
-                    break;
+                    count = true;
                  }
-                 else{
-                     document.querySelector("#console").innerText=a+" 으로 검색된 정보는 없습니다.";
-                 }
+            }
+            if (count == false){
+                document.querySelector("#console").innerText = 
+                a+" 으로 검색된 정보는 없습니다.";
             }
         });
     </script>
