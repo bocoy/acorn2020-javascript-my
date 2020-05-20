@@ -6,11 +6,11 @@
     <title>Step09_example2.html</title>
     <style>
         canvas{
-            border: 1px solid red;
+            border: 1px solid ca;
         }
     </style>
 </head>
-<body>
+<body id = "body">
     <h1>그림판 만들기</h1>
     <canvas id="myCanvas" width="500" height="500"></canvas>
     <div>
@@ -18,7 +18,9 @@
         굵기<input type="range" id="selectedWidth"
                 min="1" max="30" step="1" value="5"/>
         <strong id="displayWidth">5</strong>
-        <button id="clearBtn">Clear</button>
+        <input type="number" id= "width-num"/>
+        <button id = "back-col">change</button>
+        <button id = "random">random</button>
     </div>
     <script>
         //canvas 의 참조값 얻어오기 
@@ -29,11 +31,12 @@
         //현재 그림을 그리고 있는 상태인지 여부를 관리할 
         //변수를 선언하고 초기값 부여하기
         var isDrawing=false;
-
+        var randomcol = ["#025555","#034444","#288888"];
+        var randomnum = Math.random()*3;
         //색상과 선의 굵기 초기값 지정하기
         var thisColor="#000000";
         var thisWidth=5; 
-
+        var bockcol = "#000000"
         //부드럽게 그려지게
         context.lineCap="round";
         context.lineJoin="round";
@@ -79,7 +82,13 @@
         .addEventListener("change", function(){
             //선택된 색상값을 변수에 대입하기 
             thisColor = this.value;
+            backcol = this.value;
         });
+        document.querySelector("#back-col").addEventListener("click", function(){
+            document.querySelector("#body").
+            style.backgroundColor = backcol;
+        });
+        
 
         //굵기를 바꿀때 실행할 함수 등록
         document.querySelector("#selectedWidth")
@@ -89,19 +98,24 @@
             thisWidth = this.value;
         });
         
-        document.querySelector("#clearBtn")
-        .addEventListener("click", function(){
-            context.clearRect(0,0,500,500);
-        });
+        // document.querySelector("#clearBtn")
+        // .addEventListener("click", function(){
+        //     context.clearRect(0,0,500,500);
+        // });
         
-        /* 
-            document.querySelector("#width-num").addEventListener("click",function(){
-            document.querySelector("#displayWidth").innerText = this.value;
-            thisWidth = this.value;
-            document.querySelector("#selectedWidth").value = this.value;
-         }) 
          
-         */
+        document.querySelector("#width-num")
+        .addEventListener("click",function(){
+                document.querySelector("#displayWidth").innerText = this.value;
+                thisWidth = this.value;
+                document.querySelector("#selectedWidth").value = this.value;
+         }); 
+         
+         document.querySelector("#random").addEventListener("click", function(){
+             document.querySelector("#body").style.backgroundColor = randomcol[randomnum];
+         })
+         
+    
     </script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_if3.html</title>
+</head>
+<body>
+    <h1>다중 if 문 테스트중...</h1>
+    <button id = "inputBtn">점수 입력 하기</button>
+    <p id="console"></p>
+    <script>
+        document.querySelector("#inputBtn")
+        .addEventListener("click", function(){
+            //입력받은 문자열을 숫자로 바꿔서 변수에 담는다.
+            var a = document.querySelector("#console");
+            var jumsu = parseInt(prompt("점수(0~100)를 입력하세요"));
+            /*
+                점수가 
+                90 이상이면 "A"
+                80 이상이면 "B"
+                70 이상이면 "C"
+                60 이상이면 "D"
+                60 미만이면 "F"
+                라는 문자열을 p 요소에 출력해 보세요.
+            */
+            if(jumsu>=0 && jumsu<=100){
+                if(jumsu>=90){
+                    a.innerText = "A";
+                }
+                else if(jumsu>=80){
+                    a.innerText = "B";
+                }
+                else if(jumsu>=70){
+                    a.innerText = "C";
+                }
+                else if(jumsu>=60){
+                    a.innerText = "D";
+                }
+                else{
+                    a.innerText = "F";
+                }
+            }
+            else alert("다시 입력하세요.");
+        });
+    </script>
+</body>
+</html>
