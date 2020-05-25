@@ -6,21 +6,35 @@
     <title>Step09_example2.html</title>
     <style>
         canvas{
+<<<<<<< HEAD
             border: 1px solid ca;
         }
     </style>
 </head>
 <body id = "body">
+=======
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
     <h1>그림판 만들기</h1>
     <canvas id="myCanvas" width="500" height="500"></canvas>
     <div>
         색상<input type="color" id="selectedColor"/>
         굵기<input type="range" id="selectedWidth"
+<<<<<<< HEAD
                 min="1" max="30" step="1" value="5"/>
         <strong id="displayWidth">5</strong>
         <input type="number" id= "width-num"/>
         <button id = "back-col">change</button>
         <button id = "random">random</button>
+=======
+                min="1" max="20" step="1" value="5"/>
+        <strong id="displayWidth">5</strong>
+        <button id="clearBtn">Clear</button>
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
     </div>
     <script>
         //canvas 의 참조값 얻어오기 
@@ -31,12 +45,20 @@
         //현재 그림을 그리고 있는 상태인지 여부를 관리할 
         //변수를 선언하고 초기값 부여하기
         var isDrawing=false;
+<<<<<<< HEAD
         var randomcol = ["#025555","#034444","#288888"];
         var randomnum = Math.random()*3;
         //색상과 선의 굵기 초기값 지정하기
         var thisColor="#000000";
         var thisWidth=5; 
         var bockcol = "#000000"
+=======
+
+        //색상과 선의 굵기 초기값 지정하기
+        var thisColor="#000000";
+        var thisWidth=5; 
+
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
         //부드럽게 그려지게
         context.lineCap="round";
         context.lineJoin="round";
@@ -82,6 +104,7 @@
         .addEventListener("change", function(){
             //선택된 색상값을 변수에 대입하기 
             thisColor = this.value;
+<<<<<<< HEAD
             backcol = this.value;
         });
         document.querySelector("#back-col").addEventListener("click", function(){
@@ -89,11 +112,15 @@
             style.backgroundColor = backcol;
         });
         
+=======
+        });
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
 
         //굵기를 바꿀때 실행할 함수 등록
         document.querySelector("#selectedWidth")
         .addEventListener("input", function(){
             //현재 value  값을 테스트로 콘솔창에 출력해 보기
+<<<<<<< HEAD
             document.querySelector("#displayWidth").innerText = this.value;
             thisWidth = this.value;
         });
@@ -116,6 +143,21 @@
          })
          
     
+=======
+            console.log(this.value);
+            //strong  요소에 출력
+            document.querySelector("#displayWidth").innerText=this.value;
+            //현제 색상값에 대입해서 선의 굵기에 반영되도록 한다.
+            thisWidth=this.value;
+        });
+
+        document.querySelector("#clearBtn")
+        .addEventListener("click", function(){
+            // context 를 이용해서 사각형 영역 clear 하기
+            //  .clearRect(x, y, width, height)
+            context.clearRect(0, 0, 500, 500);
+        });
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
     </script>
 </body>
 </html>

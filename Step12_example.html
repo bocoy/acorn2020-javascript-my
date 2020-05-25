@@ -8,6 +8,7 @@
 <body>
     <h1>createElement 테스트중...</h1>
     <ul id="friendList">
+<<<<<<< HEAD
 
     </ul>
     <script>
@@ -30,6 +31,24 @@
             li.innerText = name;
             document.querySelector("#friendList").append(li);
         })
+=======
+        
+    </ul>
+    <script>
+        //친구 이름이 들어 있는 배열 
+        const names=["김구라","해골","원숭이","주뎅이","덩어리"];
+        /*
+            배열에 들어있는 친구이름을 이용해서 
+            <li>김구라</li> 
+            와 같은 요소를 동적으로 만들어서 
+            ul 요소에 append 해 보세요. (페이지 로딩 시점에)
+        */
+        for(let i=0; i<names.length; i++){
+            let a=document.createElement("li");
+            a.innerText=names[i];
+            document.querySelector("#friendList").append(a);
+        }
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
     </script>
 </body>
 </html>

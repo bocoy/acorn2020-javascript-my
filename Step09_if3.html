@@ -7,14 +7,22 @@
 </head>
 <body>
     <h1>다중 if 문 테스트중...</h1>
+<<<<<<< HEAD
     <button id = "inputBtn">점수 입력 하기</button>
+=======
+    <button id="inputBtn">점수 입력 하기</button>
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
     <p id="console"></p>
     <script>
         document.querySelector("#inputBtn")
         .addEventListener("click", function(){
             //입력받은 문자열을 숫자로 바꿔서 변수에 담는다.
+<<<<<<< HEAD
             var a = document.querySelector("#console");
             var jumsu = parseInt(prompt("점수(0~100)를 입력하세요"));
+=======
+            var jumsu=parseFloat(prompt("점수(0~100)를 입력하세요"));
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
             /*
                 점수가 
                 90 이상이면 "A"
@@ -24,6 +32,7 @@
                 60 미만이면 "F"
                 라는 문자열을 p 요소에 출력해 보세요.
             */
+<<<<<<< HEAD
             if(jumsu>=0 && jumsu<=100){
                 if(jumsu>=90){
                     a.innerText = "A";
@@ -42,6 +51,34 @@
                 }
             }
             else alert("다시 입력하세요.");
+=======
+            // if(jumsu >= 90){
+            //     document.querySelector("#console").innerText="A";
+            // }else if(jumsu >= 80){
+            //     document.querySelector("#console").innerText="B";
+            // }else if(jumsu >= 70){
+            //     document.querySelector("#console").innerText="C";
+            // }else if(jumsu >= 60){
+            //     document.querySelector("#console").innerText="D";
+            // }else{
+            //     document.querySelector("#console").innerText="F";
+            // }
+            
+            //학점을 담을 변수를 미리 만들어 놓고 
+            var grade;
+            if(jumsu >= 90){
+                grade="A"; //적당한 학점을 담는다. 
+            }else if(jumsu >= 80){
+                grade="B";
+            }else if(jumsu >= 70){
+                grade="C";
+            }else if(jumsu >= 60){
+                grade="D";
+            }else{
+                grade="F"; 
+            }
+            document.querySelector("#console").innerText=grade;
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
         });
     </script>
 </body>

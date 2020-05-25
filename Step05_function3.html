@@ -6,6 +6,7 @@
     <title>Step05_function3.html</title>
 </head>
 <body>
+<<<<<<< HEAD
     <h1>function type 테스트중...</h1>
     <button onclick= "test()">test 함수 호출하기</button>
     <script>
@@ -17,14 +18,35 @@
             return 999;
         };
         var f3 = function(){
+=======
+    <h1>function type  테스트중...</h1>
+    <button onclick="test()">test 함수 호출하기</button>
+    <script>
+        var f1=function(){
+            console.log("f1() 호출됨");
+        };
+        var f2=function(){
+            console.log("f2() 호출됨");
+            return 999;
+        };
+        var f3=function(){
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
             console.log("f3() 호출됨");
             var msg="안녕";
             return msg;
         };
+<<<<<<< HEAD
         var test = function(){
             var a= f1();
             var b= f2();
             var c= f3();
+=======
+
+        var test=function(){
+            var a=f1(); //undefiend
+            var b=f2(); //999
+            var c=f3(); //"안녕"
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
         };
     </script>
 </body>

@@ -8,6 +8,7 @@
 <body>
     <h1>string type 테스트중...</h1>
     <script>
+<<<<<<< HEAD
         var line = "abcde12345";
         //string type 의 저장소 참조
         var size = line.length;
@@ -20,6 +21,36 @@
         var myName = "김구라";
         var yourName = "원숭이";
         var info2 = `나의 이름 :${myName}, 너의 이름: ${yourName}`;
+=======
+        /*
+            string type 도 객체이다.
+            객체는 저장소(속성) 과 기능(function)  으로 구성된다.
+        */
+        var line="abcde/12345/!@#$%/가나다라";
+
+        // string type 의 저장소 참조 
+        var size=line.length;
+        // string type 의 기능 사용 
+        var result=line.replace("e", "EEE");
+        var result2=line.substring(0, 5);
+        var result3=line.split("/");
+
+
+        // back tick 문자를 이용해서 문자열을 만들수도 있다.
+        // back tick 문자열 형식은 ECMAScript6  에서 추가됨 
+        // 지금 까지 배운거는 ECMAScript5 버전  
+        var info=`
+            나의 이름은 김구라
+            너의 이름은 원숭이
+            하나
+            두울
+        `;
+
+        var myName="김구라";
+        var yourName="원숭이";
+
+        var info2=`나의 이름 : ${myName} , 너의 이름 : ${yourName}`;
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
     </script>
 </body>
 </html>

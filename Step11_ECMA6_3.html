@@ -10,6 +10,7 @@
     <button id="testBtn">테스트</button>
     <script>
         //인자로 전달되는 숫자의 제곱값을 리턴해주는 익명함수1
+<<<<<<< HEAD
         let a = function(num1){
             return num1* num1;
         };
@@ -36,6 +37,36 @@
         nums.forEach((item, index0)=>{
             console.log(item+ " | " +index);
         })
+=======
+        let a=function(num1){
+            return num1*num1;
+        };
+        //인자로 전달되는 숫자의 제곱값을 리턴해주는 익명함수2
+        let b=(num1)=>{
+            return num1*num1;
+        };
+         //인자로 전달되는 숫자의 제곱값을 리턴해주는 익명함수3
+        let c=num1=>num1*num1;
+
+        //버튼을 눌렀을때 호출되는 arrow 함수 등록하기 
+        document.querySelector("#testBtn")
+        .addEventListener("click", ()=>{
+            console.log("버튼을 눌렀네요?");
+        });
+
+        const nums=[1,2,3,4,5,6,7,8,9,10];
+
+        //let result=nums.filter(function(item){});
+        let result=nums.filter((item)=>{
+            return item%2 == 0;
+        });
+
+        let result2=nums.filter(item=>item%3==0);
+
+        nums.forEach((item, index)=>{
+            console.log(item+" | "+index);
+        });
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
     </script>
 </body>
 </html>

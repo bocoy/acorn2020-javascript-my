@@ -9,16 +9,27 @@
     <h1>createElement 테스트중...</h1>
     <button id="makeBtn">p 요소 동적으로 만들기</button>
     <div id="wrapper">
+<<<<<<< HEAD
     
+=======
+        
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
     </div>
     <script>
         document.querySelector("#makeBtn")
         .addEventListener("click", ()=>{
             // p 요소를 만들고 참조값을 변수에 담는다.
+<<<<<<< HEAD
             let p1 = document.createElement("p");
             //innerText 를 출력한다.
             p1.innerText = "p 요소 입니다.";
             // 원하는 요소에 추가 한다.
+=======
+            let p1=document.createElement("p");
+            // innerText 를 출력한다.
+            p1.innerText="p 요소 입니다.";
+            // 원하는 요소에 추가 한다. 
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
             document.querySelector("#wrapper").append(p1);
         });
     </script>

@@ -8,8 +8,13 @@
         .box{
             width: 100px;
             height: 100px;
+<<<<<<< HEAD
             background-color: teal;
             border: 1px solid cornflowerblue;
+=======
+            background-color: yellow;
+            border: 1px solid red;
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
         }
     </style>
 </head>
@@ -21,12 +26,33 @@
     <div class="box">div4</div>
     <div class="box">div5</div>
     <script>
+<<<<<<< HEAD
         var divs=document.querySelectorAll(".box");
         for (i=0; i<divs.length; i++){
             divs[i].addEventListener("click", function(){
                 this.innerText="clicked";
             });
         };
+=======
+        //기본 반복문 확인
+        var nums=[10,20,30,40,50];
+        for(var i=0; i<nums.length; i++){
+            console.log(nums[i]);
+        }
+        // 클래스명이 box  인 div  의 참조값을 배열에 담아오기
+        var divs=document.querySelectorAll(".box");
+        /*
+            divs 배열안에 있는 div  의 참조값을 이용해서 
+            이벤트 등록을 해서 동작하게 해 보세요.
+        */
+        for(var i=0; i<divs.length; i++){
+            divs[i].addEventListener("click", function(){
+                this.innerText="clicked!";
+            });
+        }
+        
+        
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
     </script>
 </body>
 </html>

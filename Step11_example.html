@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>ECMAScript6 테스트중...</h1>
+<<<<<<< HEAD
      <script>
          class Phone{
             //객체가 생성될때 호출되는 생성자
@@ -22,10 +23,30 @@
             set number(info){
                 this.info=info;
             }
+=======
+    <script>
+        class Phone{
+            //객체가 생성될때 호출되는 생성자 
+            constructor(brand){
+                console.log("생성자가 호출됨!");
+                //생성자의 인자로 받은 값을 속성에 저장하기
+                this.brand=brand;
+            }
+            //기능(함수)
+            call(){
+                console.log("전화를 걸어요");
+            }
+            //setter 
+            set number(info){
+                this.info=info;
+            }
+            //getter
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
             get number(){
                 let str="전화번호는 "+this.info+" 입니다.";
                 return str;
             }
+<<<<<<< HEAD
          }  
 
          let p1 = new Phone("삼성");
@@ -33,5 +54,14 @@
          let p3 = new Phone("애플");
 
      </script>
+=======
+        }
+
+        let p1=new Phone("삼성");
+        let p2=new Phone("엘지");
+        let p3=new Phone("애플");
+
+    </script>
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
 </body>
 </html>

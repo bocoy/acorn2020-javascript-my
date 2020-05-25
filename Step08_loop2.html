@@ -12,6 +12,7 @@
     <p>p3</p>
     <p>p4</p>
     <p>p5</p>
+<<<<<<< HEAD
     <button id = "printBtn">출력하기</button>
     <script>
         var names= ["김구라","해골","원숭이","주뎅이","덩어리"];
@@ -24,6 +25,23 @@
         addEventListener("click",function(){
             names.forEach(function(item, index){
                 a[index].innerText = item; 
+=======
+    <button id="printBtn">출력하기</button>
+    <script>
+        var names=["김구라","해골","원숭이","주뎅이","덩어리"];
+        // array type  의 forEach() 함수 호출하면서 함수 전달하기
+        // names.forEach(function(item, index){
+        //     console.log(item+" : "+index);
+        // });
+
+        //버튼을 눌렀을때 names 배열안에 있는 문자열을 
+        //순서대로 p요소의 innerText 에 출력해 보세요
+        //.forEach()  함수를 이용해서...
+        document.querySelector("#printBtn")
+        .addEventListener("click", function(){
+            names.forEach(function(item, index){
+                document.querySelectorAll("p")[index].innerText=item;
+>>>>>>> 2a7bc2a94998886a7a38354960c8903929047634
             });
         });
     </script>
