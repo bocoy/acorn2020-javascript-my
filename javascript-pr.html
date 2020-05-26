@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="change">change</button>
+    <div id="slice"></div>
+    <script>
+        document.querySelector("#change").addEventListener("click",function(){
+            var div2 = document.createElement("div");
+            div2.setAttribute("id","slice2");
+            div2.innerText="눌림";
+            if(confirm("눌렀음?")){
+                document.querySelector("#slice").append(div2);
+            }
+            
+        });
+    </script>
+</body>
+</html>
